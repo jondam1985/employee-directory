@@ -41,6 +41,12 @@ export default class DataArea extends Component {
         // numerically
         else if (heading === "name") {
           return a[heading].first.localeCompare(b[heading].first);
+        }
+        else if (heading === "email" || heading === "phone") {
+          return a[heading].localeCompare(b[heading]);
+        } 
+        else if (heading === "dob") {
+          return a[heading].date.localeCompare(b[heading].date);
         } else {
           return a[heading] - b[heading];
         }
@@ -54,6 +60,12 @@ export default class DataArea extends Component {
         // numerically
         else if (heading === "name") {
           return b[heading].first.localeCompare(a[heading].first);
+        }
+        else if (heading === "email" || heading === "phone") {
+          return b[heading].localeCompare(a[heading]);
+        } 
+        else if (heading === "dob") {
+          return b[heading].date.localeCompare(a[heading].date);
         } else {
           return b[heading] - a[heading];
         }
