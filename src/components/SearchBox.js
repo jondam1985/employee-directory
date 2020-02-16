@@ -5,6 +5,7 @@ function SearchBox({ handleSearchChange }) {
   return (
     <div className="searchbox">
       <form className="form-inline">
+        <label className="font-weight-bold">Filter:  </label>
         <input
           className="form-control"
           type="search"
